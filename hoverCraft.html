@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jonathan Fisher:Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+    <style>
+        /* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+ 
+}
+
+
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*magic*/
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img{
+    max-height: 500px;
+    width: auto;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+.column img {
+  width: auto;
+  height: 100px; /* Set your desired height */
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+#video-container {
+            text-align: center;
+        }
+
+        video {
+            width: 640px; /* Adjust the width as needed */
+            height: 360px; /* Adjust the height as needed */
+        }
+
+    </style>
+    
+    </head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="projects.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+                <nav id="nav">
+                    <ul class="links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutMe.html">About Me</a></li>
+                        <li><a href="Goals.html">Goals</a></li>
+                        <li class="active"><a href="projects.html" class="scroll-link">Projects</a></li>
+                        <li><a href="Fisher_Resume_1100.pdf" target="_blank" download>Download Resume</a></li>
+                    </ul>
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    </ul>
+                </nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>RC Hovercraft</h1>
+								</header>
+								<div class="image main"><img src="images/hovercraft/hovercraftheadShot.jpg" alt="" /></div>
+                                <header>
+									<h2>The Project</h2>
+								</header>
+                                <p>I have wanted to build a remote control project for a while but every time i looked into it a got overwhelmed by the learning curve that comes with the “RC” world. However one day I found a video online of of a guy who had made a 3D printed RC hovercraft. I have been doing a lot with 3D printing lately and having recently been practicing my CAD and soldering skills through my robots club I decided now would be a great time to give the RC thing another shot. And with spring break coming up I would have the free time to give the project the proper attention
+                                </p>
+                                
+                               <!-- Container for the image gallery -->
+
+
+  <header>
+    <h2>The Proposal</h2>
+</header>
+<p>Although I originally wanted to do everything for the project myself after starting to CAD the craft and diving back into the RC components world I realized it would be better for my first time to follow along to a guide I had found online which included a high level component list and a 3D craft model. (Though I would end up changing some parts out later on). <span class="image left"><img src="images/hovercraft/CADdrawing.png" alt="" /></span>The main features of the design is that it uses the same motor for lift as it does for forward proposition. It has ducts on the back that channel the air underneath it into a skirt that fills with air lifting it off the ground.
+</p>
+                                <hr />
+  <header>
+    <h2>The Process</h2>
+</header>
+<p>I started by printing out the model and ordering the electronics for the hovercraft. Once the parts came in. I mounted the servo and turbine motors to the craft and ran there wires to the underside of the body<span class="image left"><img src="images/hovercraft/craftbody.jpg" alt="" /></span>
+    I soldered the ESC (electronics speed controller) to the battery and a 5V regulator whose leads were soldered to the receiver.<span class="image right"><img src="images/hovercraft/solder.jpg" alt="" /></span> However on first testing the receiver got power and the servo was able to be controlled via the transmitter but the turbine motor did not move. I isolated the problem down to the ESC and bought a different one that ended up working, however its size was larger than the design of the craft was made for so I ended up rewiring it and mounting it on top of the craft body.
+    With the new ESC the motor was able to spin up. (Yay!). Then I did the final piece which was the skirt. Using a paper template I cut out a plastic skirt from a trash bag and used 2 3D printed clamps to hold it against the underside of the craft. <span class="image left"><img src="images/hovercraft/uinderside.jpg" alt="" /></span>It took a few tries to get it lined up properly but it finally got to a working place.
+    </p>
+                                <hr />
+
+  <header>
+    <h2>The Product</h2>
+</header>
+<p>The hovercraft it a lot of fun to drift around hardwood. It does struggle with bumps but I think a larger skit should help.</p>
+                                <hr />
+                                <div id="video-container"><video width="360" height="640" controls>
+    <source src="images/hovercraft/driving.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video></div></p>
+                                
+
+                                <header>
+									<h2>The Possible</h2>
+								</header>
+                                
+                                <p><span class="image right"><img src="images/buzz.png" alt="" /></span>If I were to do this project again there are a few changes I'd make. Now that I know more about RC electronics, transmitters and receivers. I would spend more time designing the craft myself in CAD. I would include a second motor to separate the lift from the proposition. Although it worked I feel it struggles to get the downward thrust it needs to get over bumps and things. I would also include a larger mounting space for the ESC so that the battery can be better secured on top, as it is now the battery falls off a lot. 
+                                    Overall I'm very pleased with how this project turned out and I hope to do more with RC in the future, possibly making a quadcopter drone in the future. 
+                                    <hr /> 	
+								
+							</section>
+
+					</div>
+
+		<!-- Footer -->
+        <footer id="footer">
+
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p>jfisher78@gatech.edu</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+    <!-- Copyright -->
+        <div id="copyright">
+            
+        </div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>
