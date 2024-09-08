@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jonathan Fisher:Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+    <style>
+        /* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+ 
+}
+
+
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*magic*/
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img{
+    max-height: 500px;
+    width: auto;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+.column img {
+  width: auto;
+  height: 100px; /* Set your desired height */
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+#video-container {
+            text-align: center;
+        }
+
+        video {
+            width: 640px; /* Adjust the width as needed */
+            height: 360px; /* Adjust the height as needed */
+        }
+
+    </style>
+    
+    </head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="projects.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+                <nav id="nav">
+                    <ul class="links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutMe.html">About Me</a></li>
+                        <li><a href="Goals.html">Goals</a></li>
+                        <li class="active"><a href="projects.html" class="scroll-link">Projects</a></li>
+                        <li><a href="Fisher_Resume_1100.pdf" target="_blank" download>Download Resume</a></li>
+                    </ul>
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    </ul>
+                </nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Inverse Kinematics Robotic Arm</h1>
+								</header>
+								<div class="image main"><img src="images/IK_robotArm/moneyshot.jpg" alt="" /></div>
+                                <header>
+									<h2>The Project</h2>
+								</header>
+                                <p>I’ve always been fascinated with motion, and when I learned about Inverse Kinematics (I.K.), my mind was blown. The process of defining an endpoint, determining the angles needed, and then the motor locations required to move an end effector was so cool to me. With this project, I built a simple 3D-printed robotic arm to experiment with I.K. and learn more about how it works. Throughout the project, I mostly followed a YouTube video by <a href= "https://www.youtube.com/watch?v=Q-UeYEpwXXU"> RoTechnic</a> and carefully replicated most of the steps to understand the process better.
+                                </p>
+                                
+                               <!-- Container for the image gallery -->
+
+
+  <header>
+    <h2>The Proposal</h2>
+</header>
+<p>The idea was simple: make a 3-axis arm with equal lengths on each segment so that the calculations were straightforward and control it with Arduino.<span class="image right"><img src="images/IK_robotArm/CAD.png" alt="" /></span> I designed the body in SOLIDWORKS using a similar design I found on YouTube as a reference, making only minor changes.
+</p>
+                                <hr />
+  <header>
+    <h2>The Process</h2>
+</header>
+<p>Assembling the arm was fairly simple. I used ball bearings to make the 3D-printed joints move more freely around the M3 bolts. <span class="image left"><img src="images/IK_robotArm/building2.jpg" alt="" /></span>Wiring the motors to the Arduino was simple enough; the real challenge with this project was the logic. The code (seen below) implements a series of equations and relations to determine the angles of each arm to achieve inverse kinematics.</p>
+
+<hr />
+    <p> [<em>IK Code</em>].<pre><code>
+      #include <Encoder.h>
+        #include <Encoder.h>
+        #include <Servo.h>
+        
+        #define BASESERVOPIN A0
+        #define ARM1SERVOPIN A1
+        #define ARM2SERVOPIN A2
+        #define GRIPSERVOPIN A3
+        
+        #define GRIPBUTTONPIN 4
+        #define BASEBUTTONPIN 7
+        #define ARM1BUTTONPIN 8
+        #define ARM2BUTTONPIN 9
+        
+        
+        // BAse 80-120 
+        // arm1 68-160
+        // arm2 15-96
+        // gripper 0-180
+        
+        //ZERO POINT at (75,0,75)
+        //b 100
+        //a1 118
+        //a2 70
+        // g ?
+        
+        
+        
+        Encoder myEnc(A4, A5);
+        Servo arm1servo;
+        Servo arm2servo;
+        Servo baseservo;
+        Servo gripservo;
+        
+        
+        double x=75;
+        double y=0;
+        double z=75;
+        int gripAngle=67;
+        
+        
+        
+        int angleToMicroseconds(double angle) {
+          double val = 460.0 + (((2400.0 - 460.0) / 180.0) * angle);
+          return (int)val;
+        }
+        
+        void moveToAngle(double b, double a1, double a2) {
+          // Check if the input values are within the specified ranges
+          if (b < 80 || b > 120 || a1 < 68 || a1 > 160 || a2 < 15 || a2 > 96 ) {
+            Serial.println("Error: One or more input values are out of range.");
+            return; // Exit the function if any value is out of range
+          }
+        
+          // Proceed with setting the servo positions only if all values are valid
+          baseservo.writeMicroseconds(angleToMicroseconds(b));
+          arm1servo.writeMicroseconds(angleToMicroseconds(a1));
+          arm2servo.writeMicroseconds(angleToMicroseconds(a2));
+        
+        
+          // Print the values for debugging
+          Serial.println("base: ");
+          Serial.println(b);
+        
+          Serial.println("arm1: ");
+          Serial.println(a1);
+        
+          Serial.println("arm2: ");
+          Serial.println(a2);
+        }
+        
+        
+        void moveToPos(double x, double y, double z) {
+          // Calculate the base angle
+          double b = atan2(y, x) * (180 / 3.1415); // base angle
+        
+          // Calculate the extension in the x and y directions
+          double l = sqrt(x * x + y * y); // x and y extension
+        
+          // Calculate the hypotenuse length
+          double h = sqrt(l * l + z * z);
+        
+          // Calculate the angle phi
+          double phi = atan(z / l) * (180 / 3.1415);
+        
+          // Calculate the angle theta
+          double theta = acos((h / 2) / 75) * (180 / 3.1415);
+        
+          // Calculate angles for the arm segments
+          double a1 = phi + theta; // angle for first part of the arm
+          double a2 = phi - theta; // angle for second part of the arm
+        
+          // Print the calculated values
+          Serial.print("base: ");
+          Serial.println(b);
+        
+          Serial.print("arm1: ");
+          Serial.println(a1);
+        
+          Serial.print("arm2: ");
+          Serial.println(a2);
+        
+        
+        
+          // Uncomment the following line if you have a function to move the arm
+          moveToAngle(b+100, a1+28, a2+70);
+        }
+        
+     
+        void setup() {
+          // put your setup code here, to run once:
+          
+          baseservo.attach(BASESERVOPIN,440 ,2400);
+          arm1servo.attach(ARM1SERVOPIN,440 ,2400);
+          arm2servo.attach(ARM2SERVOPIN,440 ,2400);
+          gripservo.attach(GRIPSERVOPIN,440 ,2400);
+        
+          baseservo.writeMicroseconds(angleToMicroseconds(100));
+          arm1servo.writeMicroseconds(angleToMicroseconds(118));
+          arm2servo.writeMicroseconds(angleToMicroseconds(70));
+          gripservo.writeMicroseconds(angleToMicroseconds(50));
+          
+          pinMode(BASEBUTTONPIN,INPUT);
+          pinMode(ARM1BUTTONPIN,INPUT);
+          pinMode(ARM2BUTTONPIN,INPUT);
+          pinMode(GRIPBUTTONPIN,INPUT);
+          
+          Serial.begin(9600);
+        }
+        
+        
+        
+        long oldPosition=0;
+        
+        
+        void loop() {
+        
+          int amount=0;
+          long newPosition = myEnc.read();
+          
+          if (newPosition != oldPosition) {
+            amount=newPosition-oldPosition;
+            //Serial.println(amount);
+            oldPosition = newPosition;
+          }
+        
+         if (digitalRead(BASEBUTTONPIN) == HIGH && amount!=0) {
+            Serial.println(amount);
+            x+=amount*5;
+            Serial.println(x);
+            moveToPos(x,y,z);
+          }
+        
+          if (digitalRead(ARM1BUTTONPIN) == HIGH && amount!=0) {
+            Serial.println(amount);
+            y+=amount*5;
+            Serial.println(y);
+            moveToPos(x,y,z);
+          }
+        
+          if (digitalRead(ARM2BUTTONPIN) == HIGH && amount!=0) {
+            Serial.println(amount);
+            z+=amount*5;
+            Serial.println(z);
+            moveToPos(x,y,z);
+          }
+          
+          if (digitalRead(GRIPBUTTONPIN) == HIGH && digitalRead(BASEBUTTONPIN) == LOW
+          && digitalRead(ARM1BUTTONPIN) == LOW  && digitalRead(ARM2BUTTONPIN) == LOW && amount!=0) {
+            gripAngle+=amount*5;
+             gripservo.writeMicroseconds(angleToMicroseconds(gripAngle));
+          }
+        
+        }
+    </code></pre> </p>
+      
+                                <hr />
+
+  <header>
+    <h2>The Product</h2>
+</header>
+<p>
+  The final result is a bit jittery due to the inexpensive servos and the lack of interpolation in the motors' movement. It uses an rotary emcory and 4 buttons to select the correct axis (or gripper) and move to that location. Im very pleased with how it turned out and its a lot of fun to controll.
+</p>
+                                <hr />
+                                <div id="video-container"><video width="360" height="640" controls>
+    <source src="images/IK_robotArm/FINALTEST.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video></div></p>
+                                
+
+                                <header>
+									<h2>The Possible</h2>
+								</header>
+                                
+                                <p><span class="image right"><img src="images/buzz.png" alt="" /></span>If I were to do this project again, I would focus more on smoothing out the motor control with ramping speed and change the input method, as swapping axes with buttons and the rotary encoder was not the smoothest experience. Overall, I learned a lot from this project and hope to work on something similar in the future, creating most of the code and math myself instead of relying on a reference video to solidify my understanding of the topic.
+                                    <hr /> 	
+								
+							</section>
+
+					</div>
+
+		<!-- Footer -->
+        <footer id="footer">
+
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p>jfisher78@gatech.edu</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+    <!-- Copyright -->
+        <div id="copyright">
+            
+        </div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>
