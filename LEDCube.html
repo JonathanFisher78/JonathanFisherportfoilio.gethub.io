@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jonathan Fisher:Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+    <style>
+        /* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+ 
+}
+
+
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*magic*/
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img{
+    max-height: 500px;
+    width: auto;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+.column img {
+  width: auto;
+  height: 100px; /* Set your desired height */
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+#video-container {
+            text-align: center;
+        }
+
+        video {
+            width: 640px; /* Adjust the width as needed */
+            height: 360px; /* Adjust the height as needed */
+        }
+
+    </style>
+    
+    </head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="projects.html" class="logo">Projects</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="Goals.html">Goals</a></li>
+                <li class="active"><a href="projects.html" class="scroll-link">Projects</a></li>
+                <li><a href="Fisher_Resume_1100.pdf" target="_blank" download>Download Resume</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>LED Cube</h1>
+                </header>
+                <div class="image main"><img src="images/LED_Cube/LEDCubeMain.jpg" alt="LED Cube" /></div>
+
+                <header>
+                    <h2>The Project</h2>
+                </header>
+                <p>I saw an LED cube on YouTube a few years ago, and it’s been in the back of my mind to make one ever since. It seemed simple at first (I was wrong!) but really cool. The most amazing part was seeing one run on an Arduino controlling hundreds of LEDs individually even though it had less than 30 outputs. My goals were to learn PCB design, how to use shift registers, improve my soldering skills, and learn how to code a multiplexing circuit. I followed a tutorial on GitHub for the frame and used ChatGPT to help with my circuit design and programming.</p>
+
+                <header>
+                    <h2>The Proposal</h2>
+                </header>
+                <p>The idea was to make a 6x6x6 cube—big enough for cool effects while not so large that it would be impossible to repair LEDs buried deep inside. I laser-cut a frame to help solder the LEDs and built a test circuit with shift registers on a 7-segment display as proof of concept for controlling more outputs than the Arduino natively supports.</p>
+
+                <!-- Slide Deck 1: Frame & Layers -->
+                <div class="container">
+                    <div class="mySlides1">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/LED_Cube/layerOne.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides1">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/LED_Cube/Layers.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides1">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/LED_Cube/stackingLayers.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+                    <div class="caption-container">
+                        <p id="caption1"></p>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo1 cursor" src="images/LED_Cube/layerOne.jpg" style="width:100%" onclick="currentSlide1(1)" alt="Laser-cut frame">
+                        </div>
+                        <div class="column">
+                            <img class="demo1 cursor" src="images/LED_Cube/Layers.jpg" style="width:100%" onclick="currentSlide1(2)" alt="Soldered layers">
+                        </div>
+                        <div class="column">
+                            <img class="demo1 cursor" src="images/LED_Cube/stackingLayers.jpg" style="width:100%" onclick="currentSlide1(3)" alt="Layers stacked into cube">
+                        </div>
+                    </div>
+                </div>
+
+                <header>
+                    <h2>The Process</h2>
+                </header>
+                <p>I soldered each of the six layers in the laser-cut jig, then stacked them into the full cube. Each layer took about an hour, and combining them was even longer—for a total of about 15 hours of soldering. The wiring works by connecting all 36 LEDs of a layer to a common negative lead, while each vertical column shares a positive lead. That way, a single LED can be selected by powering one layer and one column. I designed the circuit in KiCAD and ordered a PCB. After troubleshooting a transistor wiring mistake and patching it, I finally had a working board.</p>
+
+                <!-- Slide Deck 2: Electronics & Box -->
+                <div class="container">
+                    <div class="mySlides2">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="images/LED_Cube/testRigOnCube.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides2">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="images/LED_Cube/KiCad.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides2">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="images/LED_Cube/transistors.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides2">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="images/LED_Cube/Board.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                    <div class="caption-container">
+                        <p id="caption2"></p>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo2 cursor" src="images/LED_Cube/testRigOnCube.jpg" style="width:100%" onclick="currentSlide2(1)" alt="PCB and wiring">
+                        </div>
+                        <div class="column">
+                            <img class="demo2 cursor" src="images/LED_Cube/KiCad.jpg" style="width:100%" onclick="currentSlide2(2)" alt="Testing LEDs">
+                        </div>
+                        <div class="column">
+                            <img class="demo2 cursor" src="images/LED_Cube/transistors.jpg" style="width:100%" onclick="currentSlide2(3)" alt="Finished cube lit up">
+                        </div>
+                        <div class="column">
+                            <img class="demo2 cursor" src="images/LED_Cube/Board.jpg" style="width:100%" onclick="currentSlide2(4)" alt="3D printed housing box">
+                        </div>
+                    </div>
+                </div>
+
+                <header>
+                    <h2>The Product</h2>
+                </header>
+                <p>The final result is a 3D LED display that runs custom effects and graphics. Multiplexing makes it appear as though all 216 LEDs are on at once by cycling quickly through each layer. I also 3D printed a box to act as a stand and to house the electronics. This project was both fun and challenging—and it served as my master project in the Invention Studio to become certified on electronics tools. The cube is currently on display in Bobby Dodd Stadium as part of the ME Student Wing project showcase.</p>
+                <div id="video-container"><video width="640" height="360" controls>
+                    <source src="images/LED_Cube/demoVid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video></div>
+                <header>
+                    <h2>The Possible</h2>
+                </header>
+                <p><span class="image right"><img src="images/buzz.png" alt="" /></span>If I were to redo this project, I’d want to build a larger 8x8x8 cube for higher resolution, and possibly use RGB LEDs to add full color effects.</p>
+                <hr />
+
+
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p>jfisher78@gatech.edu</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Slideshow 1
+        let slideIndex1 = 1;
+        showSlides1(slideIndex1);
+        function plusSlides1(n) { showSlides1(slideIndex1 += n); }
+        function currentSlide1(n) { showSlides1(slideIndex1 = n); }
+        function showSlides1(n) {
+            let i; let slides = document.getElementsByClassName("mySlides1");
+            let dots = document.getElementsByClassName("demo1");
+            let captionText = document.getElementById("caption1");
+            if (n > slides.length) {slideIndex1 = 1}
+            if (n < 1) {slideIndex1 = slides.length}
+            for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+            for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+            slides[slideIndex1-1].style.display = "block";
+            dots[slideIndex1-1].className += " active";
+            captionText.innerHTML = dots[slideIndex1-1].alt;
+        }
+
+        // Slideshow 2
+        let slideIndex2 = 1;
+        showSlides2(slideIndex2);
+        function plusSlides2(n) { showSlides2(slideIndex2 += n); }
+        function currentSlide2(n) { showSlides2(slideIndex2 = n); }
+        function showSlides2(n) {
+            let i; let slides = document.getElementsByClassName("mySlides2");
+            let dots = document.getElementsByClassName("demo2");
+            let captionText = document.getElementById("caption2");
+            if (n > slides.length) {slideIndex2 = 1}
+            if (n < 1) {slideIndex2 = slides.length}
+            for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+            for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+            slides[slideIndex2-1].style.display = "block";
+            dots[slideIndex2-1].className += " active";
+            captionText.innerHTML = dots[slideIndex2-1].alt;
+        }
+    </script>
+</body>
+
+
+
+
+</html>
