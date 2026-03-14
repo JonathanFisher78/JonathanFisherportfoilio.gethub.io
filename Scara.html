@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jonathan Fisher:Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+    <style>
+        /* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+ 
+}
+
+
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*magic*/
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img{
+    max-height: 500px;
+    width: auto;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+.column img {
+  width: auto;
+  height: 100px; /* Set your desired height */
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+#video-container {
+            text-align: center;
+        }
+
+        video {
+            width: 640px; /* Adjust the width as needed */
+            height: 360px; /* Adjust the height as needed */
+        }
+
+    </style>
+    
+    </head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="projects.html" class="logo">Projects</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="Goals.html">Goals</a></li>
+                <li class="active"><a href="projects.html" class="scroll-link">Projects</a></li>
+                <li><a href="Fisher_Resume_1100.pdf" target="_blank" download>Download Resume</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>SCARA Dual Parallel Arm Robot</h1>
+                </header>
+                <div class="image main"><img src="images/scara_media/scarmain.jpg" alt="LED Cube" /></div>
+
+                                <!-- Slide Deck 1: finish product -->
+                <div class="container">
+                    <div class="mySlides1">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="images/scara_media/main1.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides1">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="images/scara_media/main2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides1">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="images/scara_media/main4.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides1">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="images/scara_media/main3.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+                    <div class="caption-container">
+                        <p id="caption1"></p>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo1 cursor" src="images/scara_media/main1.jpg" style="width:100%" onclick="currentSlide2(1)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="demo1 cursor" src="images/scara_media/main2.jpg" style="width:100%" onclick="currentSlide2(2)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="demo1 cursor" src="images/scara_media/main4.jpg" style="width:100%" onclick="currentSlide2(3)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="demo1 cursor" src="images/scara_media/main3.jpg" style="width:50%" onclick="currentSlide2(4)" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+                <header>
+                    <h2>The Project</h2>
+                </header>
+                <p>I’ve been interested in robotics since middle school, and recently I’ve developed a strong interest in inverse
+                    kinematics—the idea of giving a robot a coordinate in space and using math to determine the exact joint angles
+                    needed to place the end effector at that point.
+                    I was first introduced to SCARA robots through a mechanical trades handbook my dad gave me. While browsing through
+                    it and reading about different machines, I came across a section on robotics, and one type immediately caught my
+                    attention: the SCARA robot. SCARA stands for Selective Compliance Assembly Robot Arm, and what intrigued me most is
+                    that it operates primarily in a
+                    two-dimensional plane. That simplicity made it feel like the perfect platform for learning and experimenting with
+                    inverse kinematics (IK).</p>
+                <div class="image fit"><img src="images/scara_media/handbook.jpg" alt="" /></div>
+                <header>
+                    <h2>The Proposal</h2>
+                </header>
+                <p>The plan was to design and build a dual-arm parallel SCARA robot from scratch, with the goal of turning it into a pen
+                    plotter capable of drawing or writing using inverse kinematics. One of my main objectives was to learn how to take a
+                    machine from concept to completion, combining the skills I’ve gained in school with the practices I’ve learned so
+                    far during my internships.
+                    This project allowed me to bring together mechanical and electrical design into a single finished system. <span
+                        class="image left"><img src="images/scara_media/yotube.png" alt="" /></span> I wanted hands-on experience with
+                    the manual
+                    mill, CAD, electronics, and—most importantly—programming inverse kinematics to control the robot’s motion.
+                    I used several robot's on you tube as reference but ended up designing it all myself</p>
+                <!-- Slide Deck 1: finish product -->
+                
+                <header>
+                    <h2>The Process</h2>
+                    </header>
+                    <p>As with all good projects it started in CAD. i used Soildworks to design out the full robot and after a few redesigns
+                        i ended up with a aluminum extrusion frame with the arms mounted from above and a drawing zone underneath. I uses 2
+                        stepper motors that are belt driven to move the arms there is a small servo at the end to lift and lower the pen.
+                    </p>
+                    <div class="image fit"><img src="images/scara_media/cad.png" alt="" /></div>
+                    <p>After completing the CAD design, I planned the electrical system using an online tool called <a
+                            href="https://app.cirkitdesigner.com/project/d2d92227-6896-4911-9605-843db0cec31e">Cirkit Designer</a>. The main
+                        control logic is handled by a Teensy 4.0 microcontroller, which drives two TMC2209 stepper motor drivers. The system
+                        is powered by a 24 V power supply, with a regulated 5 V rail split off to supply the control logic.
+                        An emergency stop (E-stop) is wired to cut power to the motors while keeping the 5 V supply to the microcontroller
+                        active. This allows the system to remain powered for diagnostics and feedback even when the motors are disabled.</p>
+                    <div class="image fit"><img src="images/scara_media/ciuirt.png" alt="" /></div>
+                    <p>Once the design was finalized and a bill of materials was created (see BOM at the bottom of the page), I began the
+                        build process. I started with the electronics by testing the stepper motor driver circuits with the Teensy
+                        microcontroller. This phase was challenging at first, as learning how to properly configure and use the motor
+                        drivers took several attempts, and I damaged a few drivers early on. However, through trial, research, and testing,
+                        I eventually learned how to use them safely and reliably.
+                        One of the most important steps was learning how to set the adjustable potentiometer on the driver to control the
+                        maximum motor current. This required calculating the correct current limit using the driver’s formula and measuring
+                        the reference voltage (Vref) on the TMC2209. Properly setting Vref was critical to protecting both the drivers and
+                        the stepper motors.</p>
+                    <div class="box alt">
+                        <div class="row gtr-50 gtr-uniform">
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/estop.jpg" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/arundio.jpg" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/calc.jpg" alt="" /></span></div>
+                        </div>
+                    </div>
+                    <div id="video-container"><video width="640" height="360" controls>
+                            <source src="images/scara_media/stepper.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>
+                            With the electronics working, it was finally time to move on to the fun part: building the frame and assembling the
+                            robot! I cut the aluminum extrusion to rough length using a band saw, then used the manual mill to precisely square
+                            the ends and drill the required holes for mounting and tightening the bolts. Next I used the taping machine to tap
+                            the ends of the bars. I then water-jet cut the base and top plates and assembled the frame, creating a rigid
+                            structure to support the rest of the robot.
+                    </p>
+                    <div class="box alt">
+                        <div class="row gtr-50 gtr-uniform">
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/build1.jpg" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/build2.jpg" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/build3.jpg" alt="" /></span></div>
+                            <!-- Break -->
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/build4.jpg" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/build5.jpg" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/build6.jpg" alt="" /></span></div>
+                        </div>
+                    </div>
+                    <p>The Drive Train was next. And went the smoothest of all other parts of the project. The pullies and belts fit perfectly and the shaft collars and all secured it nicely</p>
+                    <div class="image fit"><img src="images/scara_media/drive.jpg" alt="" /></div>
+                    <p>The final mechanical components were the 3D-printed arms. Although simple in design, they required extensive test printing to achieve the correct tolerances for proper fit and smooth movement. More than 20 different arm prints were produced before the final version was reached. In the end, the finished arms fit together correctly and glide smoothly during operation.</p>
+                    <div class="image fit"><img src="images/scara_media/arms.jpg" alt="" /></div>
+                    <p>The pen mechanism was a partial failure in this project due to design limitations. It was originally designed around
+                        a cam shaft connected to a set-screw collar, which raised and lowered the pen carriage. A second attachment point
+                        below the carriage was intended to stabilize the pen and included springs to provide downward pressure on the paper
+                        during writing.
+                        While this mechanism worked in theory, practical constraints required the pen assembly to be moved farther back on
+                        the arm to allow the two SCARA arms to pass over each other during operation. This change increased the moment about
+                        the sliding points, introducing enough friction that the carriage could no longer move freely up and down. As a
+                        result, the mechanism had to be abandoned.
+                        In its current form, the pen is only supported at a single point, which introduces a slight wobble. Additionally,
+                        the springs are no longer able to provide sufficient downward force, making it more difficult to maintain consistent
+                        contact with the drawing surface.</p>
+                    <div class="image fit"><img src="images/scara_media/pen.jpg" alt="" /></div>
+                    <p>Another failure point occurred on the electrical side of the project. I had designed a custom PCB to integrate the
+                        Teensy 4.0 and the motor control circuitry into a compact, clean package. Unfortunately, during testing, the Teensy
+                        4.0 was damaged, which forced me to switch to an Arduino Nano on a breadboard for the remainder of the project.
+                        Because of this change, the custom PCB could no longer be used.
+                        While the Arduino Nano functioned reliably, its slower processor limited overall system performance. In particular,
+                        it could not reliably handle the higher microstepping settings supported by the TMC2209 drivers, resulting in more
+                        jittery motor motion compared to the original design.</p>
+                    <div class="image fit"><img src="images/scara_media/pcb.jpg" alt="" /></div>
+                    <p>Despite these setbacks, the robot reached a workable final state, and the last major step was programming the inverse
+                        kinematics. I began by analyzing the geometry of the robot and deriving the forward kinematics equations, expressing
+                        the end-effector position in terms of the joint angles. From there, I derived the inverse kinematics equations
+                        needed to compute the joint angles from a desired (x,y) position.
+                        I first implemented and tested the equations in Python, with the help of ChatGPT, as a proof of concept before
+                        porting them to Arduino. Starting with forward kinematics proved especially valuable, as it allowed me to correctly
+                        define the reference frame of the physical robot. Without this step, the kinematic math did not behave as expected.
+                        After adding the inverse kinematics formulas and making several adjustments, the system successfully produced
+                        correct motion.</p>
+                     <div class="box alt">
+                        <div class="row gtr-50 gtr-uniform">
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/Fk0.png" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/Fk0B.png" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/Fk1.png" alt="" /></span></div>
+                            <!-- Break -->
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/Fk2.png" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/Fk3.png" alt="" /></span></div>
+                            <div class="col-4"><span class="image fit"><img src="images/scara_media/Fk4.png" alt="" /></span></div>
+                        </div>
+                    </div>
+                    <header>
+                        <h2>The Product</h2>
+                    </header>
+                    <div id="video-container"><video width="640" height="360" controls>
+                            <source src="images/scara_media/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+ 
+                    <header>
+                        <h2>The Possible</h2>
+                    </header>
+                    <p><span class="image right"><img src="images/buzz.png" alt="" /></span>If I were to do this project again, I would
+                        probably machine the arms out of metal instead of 3D printing, since I ran into problems getting the set screws to
+                        work with heat inserts. I’d also spend more time refining the software to make it run more smoothly. One challenge
+                        was that I hadn’t budgeted enough for electronics, so I was cautious about burning out drivers and microcontrollers,
+                        which meant I stopped once it reached a functional state.
+                        For future builds, I’d start with an Arduino Nano for prototyping and then move to a Teensy when I needed more
+                        processing speed. I’d also redesign the pen mechanism to make it more robust and eliminate the need for spring
+                        support.
+                        Overall, I’m really happy with how the project turned out. I learned a lot and am very proud of the finished
+                        product!
+                        Thank you to the Invention Studio for allowing me the opportunity to create this project I'm truly so grateful</p>
+                    <hr />
+                    
+                    <p>Funded and supported by the Invention Studio at Georgia Tech, a student organization.
+                    </p>
+                    <div class="image fit"><img src="images/scara_media/invetionstuduioo.png" alt="" /></div>
+
+
+
+
+
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p>jfisher78@gatech.edu</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Slideshow 1
+        let slideIndex1 = 1;
+        showSlides1(slideIndex1);
+        function plusSlides1(n) { showSlides1(slideIndex1 += n); }
+        function currentSlide1(n) { showSlides1(slideIndex1 = n); }
+        function showSlides1(n) {
+            let i; let slides = document.getElementsByClassName("mySlides1");
+            let dots = document.getElementsByClassName("demo1");
+            let captionText = document.getElementById("caption1");
+            if (n > slides.length) {slideIndex1 = 1}
+            if (n < 1) {slideIndex1 = slides.length}
+            for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+            for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+            slides[slideIndex1-1].style.display = "block";
+            dots[slideIndex1-1].className += " active";
+            captionText.innerHTML = dots[slideIndex1-1].alt;
+        }
+
+        // Slideshow 2
+        let slideIndex2 = 1;
+        showSlides2(slideIndex2);
+        function plusSlides2(n) { showSlides2(slideIndex2 += n); }
+        function currentSlide2(n) { showSlides2(slideIndex2 = n); }
+        function showSlides2(n) {
+            let i; let slides = document.getElementsByClassName("mySlides2");
+            let dots = document.getElementsByClassName("demo2");
+            let captionText = document.getElementById("caption2");
+            if (n > slides.length) {slideIndex2 = 1}
+            if (n < 1) {slideIndex2 = slides.length}
+            for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+            for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+            slides[slideIndex2-1].style.display = "block";
+            dots[slideIndex2-1].className += " active";
+            captionText.innerHTML = dots[slideIndex2-1].alt;
+        }
+    </script>
+</body>
+
+
+
+
+</html>
