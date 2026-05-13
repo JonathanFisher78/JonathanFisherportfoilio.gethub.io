@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Jonathan Fisher Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Dancing Script', cursive; 
+        }
+        .custom-box {
+            background-color: #f0f8ff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+            margin: 20px auto; 
+            max-width: 600px; 
+        }
+        .banner {
+            font-size: 32px;
+            color: #186a9a; 
+            font-family: 'Dancing Script', cursive; 
+        }
+        .poem-text {
+            font-family: 'Dancing Script', cursive; 
+            font-size: 25px; 
+            color: #333; 
+            text-align: center; 
+        }
+
+        /* Password Logic Styles */
+        #password-section {
+            display: block;
+        }
+        #poem-section {
+            display: none; /* Hidden by default */
+        }
+        .unlock-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #186a9a;
+            font-family: sans-serif; /* Standard font for input for clarity */
+            margin-bottom: 10px;
+        }
+        .unlock-button {
+            background-color: #186a9a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+<div id="wrapper" class="fade-in">
+
+    <header id="header">
+        <a href="index.html" class="logo">Jonathan Fisher</a>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="Goals.html">Goals</a></li>
+            <li><a href="projects.html" class="scroll-link">Projects</a></li>
+            <li><a href="Jonathan_Fisher.pdf" target="_blank" download>Download Resume</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <div class="custom-box" style="margin: 20px auto; max-width: 700px;">
+            
+            <div id="password-section">
+                <h2 class="banner">Locked Content</h2>
+                <p>Please enter the password to read the riddle.</p>
+                <input type="text" id="pw-input" class="unlock-input" placeholder="Password">
+                <br>
+                <button onclick="verifyPassword()" class="unlock-button">Unlock</button>
+                <p id="error-msg" style="color: red; display: none; margin-top: 10px;">Incorrect Password</p>
+            </div>
+
+            <div id="poem-section">
+                <h2 class="banner"></h2>
+                <p class="poem-text">
+                    My twin builds the muscle, but I build the crowd, <br>
+                    The companion of Toothless the dragon inside me is found.<br>
+                    Celluloid warfare takes place on three of my plains,<br>
+                    Beside the Great Hall where the hunger sustains.<br>
+                    What am I?
+
+                </p>
+            
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <section class="split contact">
+            <section>
+                <h3>Email</h3>
+                <p>jfisher78@gatech.edu</p>
+            </section>
+            <section>
+                <h3>Social</h3>
+                <ul class="icons alt">
+                    <li><a href="https://www.linkedin.com/in/jonathan-fisher-b26282291/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    const passSection = document.getElementById('password-section');
+    const poemSection = document.getElementById('poem-section');
+    const errorMsg = document.getElementById('error-msg');
+
+    // On page load, check if they've already unlocked it
+    window.onload = function() {
+        if (localStorage.getItem('poemAccess') === 'granted') {
+            showPoem();
+        }
+    };
+
+    function verifyPassword() {
+        const userInput = document.getElementById('pw-input').value;
+        // Case-insensitive check
+        if (userInput.toLowerCase() === "gray flower") {
+            localStorage.setItem('poemAccess', 'granted');
+            showPoem();
+        } else {
+            errorMsg.style.display = 'block';
+        }
+    }
+
+    function showPoem() {
+        passSection.style.display = 'none';
+        poemSection.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
